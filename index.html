@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Kyselylomake</title>
+        <link rel="stylesheet" href="" />
+    </head>
+    <body>
+        <h1 id="otsikko">Kyselylomake</h1>
+        <p id="kuvaus">
+            Tervetuloa vastaamaan kyselyyn. Täytä alla olevat kentät ja lähetä
+            lomake.
+        </p>
+
+        <form id="kyselylomake" onsubmit="return validateForm()">
+        <label for="nimi" id="nimisyotto">Nimi:</label>
+        <input type="text" id="nimi" name="nimi" required minlength="3" placeholder="Anna nimesi">
+        <small>Nimen tulee olla vähintään 3 merkkiä pitkä.</small>
+        <br><br>
+
+        <label for="email" id="emailsyotto">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Anna sähköpostisi">
+        <small>Anna oikeamuotoinen sähköpostiosoite.</small>
+        <br><br>
+
+        <label for="ika" id="ikasyotot">Ikä:</label>
+        <input type="number" id="ika" name="ika" required min="18" max="100" placeholder="Anna ikäsi">
+        <small>Anna ikäsi väliltä 18-100.</small>
+        <br><br>
+
+        <label for="pudotus">Mikä on lempivärisi?</label>
+        <select id="pudotus" name="pudotus" required>
+          <option value="">Valitse...</option>
+          <option value="punainen">Punainen</option>
+          <option value="sininen">Sininen</option>
+          <option value="vihrea">Vihreä</option>
+          <option value="keltainen">Keltainen</option>
+          <option value="violetti">Violetti</option>
+          <option value="vaaleanpunainen">Vaaleanpunainen</option>
+          <option value="musta">Musta</option>
+          <option value="valkoinen">Valkoinen</option>
+        </select>
+        <br><br>
+
+        <fieldset>
+          <legend>Valitse sukupuolesi</legend>
+          <input type="radio" id="mies" name="sukupuoli" value="mies" required>
+          <label for="mies">Mies</label>
+          <input type="radio" id="nainen" name="sukupuoli" value="nainen">
+          <label for="nainen">Nainen</label>
+          <input type="radio" id="muu" name="sukupuoli" value="muu">
+          <label for="muu">Muu</label>
+        </fieldset>
+        <br><br>
+
+        <fieldset>
+          <legend>Valitse harrastuksesi</legend>
+          <input type="checkbox" id="urheilu" name="harrastukset" value="urheilu">
+          <label for="urheilu">Urheilu</label>
+          <input type="checkbox" id="musiikki" name="harrastukset" value="musiikki">
+          <label for="musiikki">Musiikki</label>
+          <input type="checkbox" id="lukeminen" name="harrastukset" value="lukeminen">
+          <label for="lukeminen">Lukeminen</label>
+          <input type="checkbox" id="taideteollisuus" name="harrastukset" value="taideteollisuus">
+          <label for="taideteollisuus">Taideteollisuus</label>
+          <input type="checkbox" id="valokuvaus" name="harrastukset" value="valokuvaus">
+          <label for="valokuvaus">Valokuvaus</label>
+          <input type="checkbox" id="koodaus" name="harrastukset" value="koodaus">
+          <label for="koodaus">Koodaus</label>
+        </fieldset>
+        <br><br>
+
+        <label for="kommentit">Lisäkommentit:</label>
+        <textarea name="kommentit" id="kommentit" rows="4" cols="50" placeholder="Kirjoita kommenttisi tähän..."></textarea>
+        <br><br>
+
+        <button type="submit" id="laheta">Lähetä</button>
+        </form>
+
+        <script src="scripts.js"></script>
+    </body>
+</html>
