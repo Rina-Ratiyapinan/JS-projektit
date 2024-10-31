@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arvaa Luku - Peli</title>
+    <!-- Link to CSS file for styling -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Arvaa Luku - Peli</h1>
+        <p>Arvaa luku välillä 1 ja 10</p>
+        
+        <!-- Message area to show hints like "Try higher" or "Game Over" -->
+        <div id="message"></div>
+        
+        <!-- Number buttons for guesses, each button calls makeGuess with a number 1-10 -->
+        <div class="numbers">
+            <button class="number-btn" onclick="makeGuess(1)">1</button>
+            <button class="number-btn" onclick="makeGuess(2)">2</button>
+            <button class="number-btn" onclick="makeGuess(3)">3</button>
+            <button class="number-btn" onclick="makeGuess(4)">4</button>
+            <button class="number-btn" onclick="makeGuess(5)">5</button>
+            <button class="number-btn" onclick="makeGuess(6)">6</button>
+            <button class="number-btn" onclick="makeGuess(7)">7</button>
+            <button class="number-btn" onclick="makeGuess(8)">8</button>
+            <button class="number-btn" onclick="makeGuess(9)">9</button>
+            <button class="number-btn" onclick="makeGuess(10)">10</button>
+        </div>
+
+        <!-- Display for wins and losses -->
+        <div class="stats">
+            <p>Voitot: <span id="wins">0</span></p>
+            <p>Tappiot: <span id="losses">0</span></p>
+        </div>
+
+        <!-- Restart button to start a new game -->
+        <button id="restart-btn" onclick="restartGame()">Aloita Uudelleen</button>
+    </div>
+
+    <!-- Link to JavaScript file for game logic -->
+    <script src="script.js"></script>
+</body>
+</html>
+/* Basic styling for the body to center the game on the page */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+}
+
+/* Main container styling */
+.game-container {
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for number buttons */
+.number-btn {
+    padding: 10px;
+    margin: 5px;
+    width: 40px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+}
+
+/* Disabled button styling to show they are unclickable */
+.number-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Styling for the restart button */
+#restart-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+/* Additional margin for stats display */
+.stats {
+    margin-top: 10px;
+}
+
+
+// Set up initial game values
+let randomNumber = Math.floor(Math.random() * 10) + 1;  // Generate a random number between 1 and 10
+let attempts = 3;  // Number of guesses allowed
+let wins = 0;      // Wins counter
+let losses = 0;    // Losses counter
+
+// Function to handle user guesses
+function makeGuess(guess) {
+    if (guess === randomNumber) {
+        // If the guess is correct
+        alert("Oikein! Voitit pelin!");  // Show a win message
+        wins++;  // Increase wins
+        resetGame();  // Start a new game
+    } else {
+        // If the guess is incorrect
+        attempts--;  // Reduce attempts by 1
+        if (attempts > 0) {
+            if (guess < randomNumber) {
+                alert("Yritä isompaa lukua!");  // Hint to try higher
+            } else {
+                alert("Yritä pienempää lukua!");  // Hint to try lower
+            }
+        } else {
+            // If no attempts are left
+            alert(`Peli ohi! Oikea luku oli ${randomNumber}.`);  // Show game over message
+            losses++;  // Increase losses
+            resetGame();  // Start a new game
+        }
+    }
+
+    // Update win/loss statistics on the page
+    document.getElementById("wins").innerText = wins;
+    document.getElementById("losses").innerText = losses;
+}
+
+// Function to reset the game
+function resetGame() {
+    randomNumber = Math.floor(Math.random() * 10) + 1;  // New random number
+    attempts = 3;  // Reset attempts
+    alert("Uusi peli aloitettu! Arvaa luku välillä 1 ja 10.");  // New game message
+}
