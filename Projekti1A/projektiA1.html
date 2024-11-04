@@ -1,86 +1,89 @@
 <!DOCTYPE html>
+
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kirjautumislomake</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<article>
-    <H1>Sign-in Form</H1>
-<form>
-    <!--information-->
-    <div class="information">
-        <label for="firstname">First name: </label>
-        <input type="text" id="fname" placeholder="Enter first name..."><br>
-        <label for="lastname">Last name: </label>
-        <input type="text" id="lname" placeholder="Enter last name..."><br>
-        <label for="email">Email:</label>
-        <input type="text" id="email" placeholder="Enter email..."><br>
-        <label for="password">Password: </label>
-        <input type ="password" id="password" placeholder="Enter password..."><br>
-    </div>
-    <!--password checklist-->
-    <div class="pwchecklist">
-        <h3>The password requires</h3>
-        <ul>
-            <li>At least 12 characters</li>
-            <li>At least 1 number</li>
-            <li>At least 1 lowercase letter(a-z)</li>
-            <li>At least 1 uppercase letter(A-Z)</li>
-          </ul>
-    </div>
-    <!--poll-->
-    <div class="poll">
-        <label for="movie">Best movie for Halloween:</label><br>
-        <div class="radio-group">
-            <input type="radio" id="halloween" name="leffa">
-            <label for="Halloween">Halloween</label><br>
-            <input type="radio" id="friday" name="leffa">
-            <label for="friday">Friday the 13th</label><br>
-            <input type="radio" id="nightmare" name="leffa">
-            <label for="nightmare">Nightmare on Elm Street</label><br>
-            <input type="radio" id="scream" name="leffa">
-            <label for="scream">Scream</label><br>
-            <input type="radio" id="other" name="leffa">
-            <label for="other">Other</label><br>
-        </div>
-    </div>
-    <!--checkbox-->
-    <div class="checkbox">
-        <label for="checkbox">Devices you use:</label><br>
-        <div class="checkbox-group">
-            <input type="checkbox" id="desktop" name="device" value="desktop">
-        <label for="desktop">Desktop computer</label><br>
-        <input type="checkbox" id="Laptop" name="device" value="laptop">
-        <label for="laptop">Laptop</label><br>
-        <input type="checkbox" id="tablet" name="device" value="device">
-        <label for="tablet">Tablet</label><br>
-        <input type="checkbox" id="cellphone" name="device" value="device">
-        <label for="Cell phone">Cell phone</label><br>
-        </div>
-    </div>
-    <!--dropdown menu-->
-    <div class="dropdown">
-    <label for="dropdown">Your opinion on the site:</label><br>
-    <select name="dropdown" id="opinion">
-        <option value="option1">I'd hire you</option>
-        <option value="option2">Great</option>
-        <option value="option3">Average</option>
-        <option value="option4">Could be getter</option>
-        <option value="option5">Totally suck</option>
-    </select>
-    </div>
-    <!--textfield-->
-    <div class="textfield">
-    <label for="textfield">Give us feedback: </label><br>
-        <textarea id="textfield" name="textfield" rows="10" cols="80"></textarea><br>
-    </div>
-    <button onclick="check()">Send</button> 
-</form>
-</article>
+    <article>
+        <H1>Sign-in Form</H1>
+        <form>
+            <!--basic information-->
+            <div class="information">
+                <label for="firstname">First name: </label>
+                <input type="text" id="fname" placeholder="Enter first name..."><br>
+                <label for="lastname">Last name: </label>
+                <input type="text" id="lname" placeholder="Enter last name..."><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Enter your email..."><br>  
+                <label for="password">Password: </label>
+                <input type ="password" id="password" placeholder="Enter the password..."><br>
+            </div>
 
+            <!--password-checklist-->
+            <div class="password-checklist">
+                <h3 class="checklist-title">Password should be</h3>
+                    <ul class="checklist">
+                        <li class="condition">At least 12 characters</li>
+                        <li class="condition">At least 1 number</li>
+                        <li class="condition">At least 1 lowercase letter(a-z)</li>
+                        <li class="condition">At least 1 uppercase letter(A-Z)</li>
+                    </ul>
+            </div>
+
+            <!--poll-->
+            <div class="movie-poll">
+                <label for="movie">Best movie for Halloween:</label><br>
+                <input type="radio" id="halloween" name="leffa">
+                <label for="Halloween">Halloween</label><br>
+                <input type="radio" id="friday" name="leffa">
+                <label for="friday">Friday the 13th</label><br>
+                <input type="radio" id="nightmare" name="leffa">
+                <label for="nightmare">Nightmare on Elm Street</label><br>
+                <input type="radio" id="scream" name="leffa">
+                <label for="scream">Scream</label><br>
+                <input type="radio" id="another" name="leffa">
+                <label for="other">Other</label><br>
+            </div>
+
+            <!--checkbox-->
+            <div class="checkbox">
+                <label for="check">Devices you use:</label><br>
+                <input type="checkbox" id="desktop" name="device">
+                <label for="desktop"> Desktop computer</label><br>
+                <input type="checkbox" id="laptop" name="device">
+                <label for="laptop">Laptop</label><br>
+                <input type="checkbox" id="tablet" name="device">
+                <label for="tablet">Tablet</label><br>
+                <input type="checkbox" id="cell phone" name="device">
+                <label for="cellphone">Cell phone</label><br>
+            </div>
+
+            <!--dropdown list-->
+            <div class="dropdown">
+                <label for="opinion">Tell us your opinion about the site</label><br>
+                <select name="opinion" id="dropdown">
+                <option value="option1">I'd hire you</option>
+                <option value="option2">Great</option>
+                <option value="option3">Average</option>
+                <option value="option4">Could be better</option>
+                <option value="option5">Totally suck</option>
+            </select> <br>
+            </div>
+
+            <!--textfield-->
+            <div class="textfield">
+                <label for="textfield">Give us feedback: </label><br>
+                <textarea id="textfield" name="textfield" rows="10" cols="80"></textarea><br>
+            </div>
+
+            <button onclick="check(event)">Send</button>
+            <p id="p1"></p>
+        </form>
+    </article>
+<script type= "text/javascript" src="ProjektiA1.js"></script>
 </body>
-<script type= "text/javascript" src="javascript/ProjektiA1.js"></script>
 </html>
