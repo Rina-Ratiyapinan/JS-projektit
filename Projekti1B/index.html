@@ -7,13 +7,12 @@
         <link rel="stylesheet" href="" />
     </head>
     <body>
+        <form id="kyselylomake" onsubmit="return validateForm()">
         <h1 id="otsikko">Kyselylomake</h1>
         <p id="kuvaus">
             Tervetuloa vastaamaan kyselyyn. Täytä alla olevat kentät ja lähetä
             lomake.
         </p>
-
-        <form id="kyselylomake" onsubmit="return validateForm()">
         <label for="nimi" id="nimisyotto">Nimi:</label>
         <input type="text" id="nimi" name="nimi" required minlength="3" placeholder="Anna nimesi">
         <small>Nimen tulee olla vähintään 3 merkkiä pitkä.</small>
@@ -70,14 +69,12 @@
           <label for="koodaus">Koodaus</label>
         </fieldset>
         <br><br>
-
         <label for="kommentit">Lisäkommentit:</label>
         <textarea name="kommentit" id="kommentit" rows="4" cols="50" placeholder="Kirjoita kommenttisi tähän..."></textarea>
         <br><br>
-
         <button type="submit" id="laheta">Lähetä</button>
         </form>
-
+        <link rel= "stylesheet" href="styles.css">
         <script src="scripts.js"></script>
     </body>
 </html>
