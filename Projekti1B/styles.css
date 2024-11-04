@@ -1,6 +1,6 @@
 body {
     top: 30%;
-    background-image: url(hobbies\(edit\).jpg);
+    background-image: url(IMG\(1B\).jpg);
     background: cover;
     }
     
@@ -53,6 +53,12 @@ form small {
     font-family:Arial, Helvetica, sans-serif;
     font-style: italic
 }
+
+/* Make the 'Ikä' input field wider */
+#ika {
+    width: 150px;
+}
+
 
 button {
     display: block;
