@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arvaa Luku - Peli</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="game-container">
+        <h1>Arvaa Luku - Peli</h1>
+        <p>Arvaa luku välillä 1 ja 10</p>
+
+        <!-- Message area to show hints like "Try higher or lower" or "Game Over" -->
+        <div id="message"></div>
+
+        <!-- Number buttons for guesses -->
+        <div class="numbers">
+            <button class="number-btn" onclick="makeGuess(1, this)">1</button>
+            <button class="number-btn" onclick="makeGuess(2, this)">2</button>
+            <button class="number-btn" onclick="makeGuess(3, this)">3</button>
+            <button class="number-btn" onclick="makeGuess(4, this)">4</button>
+            <button class="number-btn" onclick="makeGuess(5, this)">5</button>
+            <button class="number-btn" onclick="makeGuess(6, this)">6</button>
+            <button class="number-btn" onclick="makeGuess(7, this)">7</button>
+            <button class="number-btn" onclick="makeGuess(8, this)">8</button>
+            <button class="number-btn" onclick="makeGuess(9, this)">9</button>
+            <button class="number-btn" onclick="makeGuess(10, this)">10</button>
+        </div>
+
+        <!-- Display for wins and losses -->
+        <div class="stats">
+            <p id="message"></p>
+            <p>Voitot: <span id="wins">0</span></p>
+            <p>Tappiot: <span id="losses">0</span></p>
+        </div>
+
+        <!-- Restart button to start a new game -->
+        <button id="restart-btn" onclick="restartGame()">Aloita Uudelleen</button>
+    </div>
+</body>
+</html>
