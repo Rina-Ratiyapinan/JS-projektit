@@ -1,0 +1,145 @@
+/* General styles */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(to right, #00dbde 0%, #fc00ff 100%);
+  padding: 10px;
+}
+.todo-app {
+  width: 100%;
+  max-width: 600px;
+  background: #fff;
+  margin: 100px auto 20px;
+  padding: 40px 30px 70px;
+  border-radius: 40px;
+}
+.todo-app h2 {
+  color: #002765;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.todo-app h2 img {
+  width: 30px;
+  margin-left: 10px;
+}
+.todo-app fieldset {
+  padding: 10px;
+}
+.todo-app ol li {
+  color: #002765;
+  margin-bottom: 20px;
+  font-size: 12px;
+  margin: 0 20px;
+}
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #edeef0;
+  border-radius: 30px;
+  padding-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  padding: 10px;
+  font-size: 16px;
+}
+button {
+  border: none;
+  outline: none;
+  padding: 16px 30px;
+  background: #ff458f;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 40px;
+}
+button:hover {
+  background: #ff5fb2;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+ul li {
+  font-size: 17px;
+  padding: 12px 8px 12px 50px;
+  position: relative;
+  background: #f9f9f9;
+  margin-bottom: 10px;
+  border-radius: 30px;
+  cursor: pointer;
+}
+ul li::before {
+  content: '';
+  position: absolute;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  background-image: url(../img/uncheck.png);
+  background-size: cover;
+  background-position: center;
+  top: 12px;
+  left: 8px;
+}
+ul li.checked {
+  color: #aaa;
+  text-decoration: line-through;
+}
+ul li.checked::before {
+  background-image: url(../img/checked.png);
+}
+ul li span {
+  position: absolute;
+  top: 12px;
+  font-size: 20px;
+  cursor: pointer;
+}
+ul li .delete-btn {
+  right: 15px;
+  color: #ff458f;
+}
+ul li .delete-btn:hover {
+  color: red;
+}
+ul li .edit-btn {
+  right: 50px;
+  color: #007bff;
+}
+ul li .edit-btn:hover {
+  color: #0056b3;
+}
+.counter-container {
+  position: relative;
+  margin-top: 10px;
+  color: #555;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.counter-container button{
+  border: none;
+  outline: none;
+  background: none;
+  color: #555;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  padding: 0 20px;
+}
+.counter-container button:hover{
+  color: #000;
+}

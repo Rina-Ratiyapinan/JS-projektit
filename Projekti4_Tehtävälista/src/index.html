@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fi">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Tehtävälista</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="container">
+            <div class="todo-app">
+                <h2>
+                    Tehtävälista <img src="img/todo list.png" alt="todo-icon" />
+                </h2>
+                <fieldset>
+                  <ol>
+                    <li>Napsauta tehtävää merkitäksesi sen valmiiksi ja napsauta uudelleen poistaaksesi sen merkinnän.
+                    </li>
+                    <li>Napsauta Muokkaa-painiketta, niin kehoteruutu tulee näkyviin. Muokkaa tehtävän tekstiä ja napsauta OK tallentaaksesi päivitetyn tehtävän tekstin.</li>
+                    <li>Napsauta Poista-painiketta ja poista tehtävä yksitellen.</li>
+                    <li>Napsauta "Tyhjennä" -painiketta poistaaksesi kaikki tehtävät.</li>
+                    <li>Tarkastele luettelossa olevien tehtävien kokonaismäärälaskuria.</li>
+                  </ol>
+                </fieldset>
+                <div class="row">
+                    <input
+                        type="text"
+                        id="input-box"
+                        placeholder="Uusi tehtävä..."
+                    />
+                    <button onclick="addTask()">Lisää</button>
+                </div>
+                <ul id="list-container"></ul>
+                <hr />
+                <div class="counter-container">
+                <div>Loppusumma: <span id="total-task">0</span></div>
+                <button onclick="clearAll()">Tyhjentää</button>
+            </div>
+        </div>
+        <script src="js/script.js"></script>
+    </body>
+</html>
