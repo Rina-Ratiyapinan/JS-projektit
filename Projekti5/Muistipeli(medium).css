@@ -34,7 +34,6 @@ html {
     }
   }
 
-
   h3 {
     font-size: 22px;
     padding: 10px;
@@ -51,7 +50,6 @@ html {
     align-items: center;
   }
   
-   
   .grid {
     margin-left: 13%;
     margin-bottom: 30px;
@@ -198,4 +196,3 @@ html {
     box-shadow: 5px 5px 5px rgba(0, 20, 3, 0.432); 
   }
   
-   
