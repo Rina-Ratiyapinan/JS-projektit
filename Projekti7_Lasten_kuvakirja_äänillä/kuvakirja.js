@@ -35,3 +35,24 @@ function play8(){
 function play9(){
     var audio9 = document.getElementById("song");
     audio9.play(); }
+
+
+//just remove if you want to display all the images, I have this saved elsewhere :)
+    let index = 1;
+    showSlides(index);
+    
+    // Next/previous controls
+    function siirry(n) {
+      showSlides(index += n);
+    }
+   
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("slide");
+      if (n > slides.length) {index = 1}
+      if (n < 1) {index = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[index-1].style.display = "block";
+    }
