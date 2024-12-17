@@ -1,66 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>kuvakirja</title>
-</head>
-<body><div class ="container">
-    <h1>Tervetuloa eläinmaailmaan!</h1>
-    <h3>Klikkaa kuvaa saadaksesi selville, miltä eläin kuulostaa.</h3>
-
-<div class= "slide">
-    <img src="Kuvat ja äänet/koira.jpg"  id="koira" onclick="play1()">
-    <audio id="hau" src="Kuvat ja äänet/koira.wav" ></audio>
+    <link rel="stylesheet" href="kuvakirja.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Tervetuloa eläinmaailmaan!</h1>
+      <h3>Klikkaa kuvaa saadaksesi selville, miltä eläin kuulostaa.</h3>
+    </div>
+    <div class="slide-container">
+      <a class="prev" onclick="siirry(-1)">&#10094;</a>
+      <div class="slide">
+        <img src="Kuvat ja äänet/koira.jpg" id="koira" onclick="play1()" />
+        <audio id="hau" src="Kuvat ja äänet/koira.wav"></audio>
+        <figcaption>Koira</figcaption>
+      </div>
+  
+      <div class="slide">
+        <img src="Kuvat ja äänet/marsu.jpg" id="marsu" onclick="play3()" />
+        <audio id="purpur" src="Kuvat ja äänet/marsu.mp3"></audio>
+        <figcaption>Marsu</figcaption>
+      </div>
+  
+      <div class="slide">
+        <img src="Kuvat ja äänet/hevonen.jpg" id="hevonen" onclick="play4()" />
+        <audio id="ihahaa" src="Kuvat ja äänet/hevonen.mp3"></audio>
+        <figcaption>Hevonen</figcaption>
+      </div>
+  
+      <div class="slide">
+        <img src="Kuvat ja äänet/pöllö.jpg" id="pöllö" onclick="play5()" />
+        <audio id="huhuu" src="Kuvat ja äänet/pöllö.mp3"></audio>
+        <figcaption>Pöllö</figcaption>
+      </div>
+  
+      <div class="slide">
+        <img src="Kuvat ja äänet/susi.jpg" id="susi" onclick="play6()" />
+        <audio id="howl" src="Kuvat ja äänet/susi.mp3"></audio>
+        <figcaption>Susi</figcaption>
+      </div>
+  
+      <div class="slide">
+        <img src="Kuvat ja äänet/leijona.jpg" id="leijona" onclick="play7()" />
+        <audio id="roar" src="Kuvat ja äänet/leijona.mp3"></audio>
+        <figcaption>Leijona</figcaption>
+      </div>
+  
+      <div class="slide">
+        <img src="Kuvat ja äänet/norsu.jpg" id="norsu" onclick="play8()" />
+        <audio id="pruut" src="Kuvat ja äänet/norsu.mp3"></audio>
+        <figcaption>Norsu</figcaption>
+      </div>
+  
+      <div class="slide">
+        <img src="Kuvat ja äänet/valas.jpg" id="valas" onclick="play9()" />
+        <audio id="song" src="Kuvat ja äänet/valas.mp3"></audio>
+        <figcaption>Valas</figcaption>
+      </div>
+      
+      <a class="next" onclick="siirry(1)">&#10095;</a>
     </div>
 
-<div class= "slide">
-    <img src="Kuvat ja äänet/kissa.jpg"  id="kissa" onclick="play2()">
-    <audio id="miau" src="Kuvat ja äänet/kissa.wav" ></audio>
-    </div>
-
-<div class= "slide">
-    <img src="Kuvat ja äänet/marsu.jpg"  id="marsu" onclick="play3()">
-    <audio id="purpur" src="Kuvat ja äänet/marsu.mp3" ></audio>
-    </div>
-
-<div class= "slide">
-    <img src="Kuvat ja äänet/hevonen.jpg" id="hevonen" onclick="play4()">
-    <audio id="ihahaa" src="Kuvat ja äänet/hevonen.mp3"></audio>
-    </div>
-
-<div class= "slide">
-    <img src="Kuvat ja äänet/pöllö.jpg" id="pöllö" onclick="play5()">
-    <audio id="huhuu" src="Kuvat ja äänet/pöllö.mp3"></audio>
-    </div>
-
-<div class= "slide">
-    <img src="Kuvat ja äänet/susi.jpg" id="susi" onclick="play6()">
-    <audio id="howl" src="Kuvat ja äänet/susi.mp3"></audio>
-    </div>
-
-<div class= "slide">
-    <img src="Kuvat ja äänet/leijona.jpg" id="leijona" onclick="play7()">
-    <audio id="roar" src="Kuvat ja äänet/leijona.mp3"></audio>
-    </div>
-
-<div class= "slide">
-    <img src="Kuvat ja äänet/norsu.jpg" id="norsu" onclick="play8()">
-    <audio id="pruut" src="Kuvat ja äänet/norsu.mp3"></audio>
-    </div>
-
-<div class= "slide">
-    <img src="Kuvat ja äänet/valas.jpg" id="valas" onclick="play9()">
-<audio id="song" src="Kuvat ja äänet/valas.mp3"></audio>
-    </div>
-
-</div>
-  <!-- Next and previous buttons -->
-  <a class="prev" onclick="siirry(-1)">&#10094;</a>
-  <a class="next" onclick="siirry(1)">&#10095;</a>
-</div>
-
-<script src="kuvakirja.js"></script>
-<link rel="stylesheet" href="kuvakirja.css">
-</body>
+    <script src="kuvakirja.js"></script>
+  </body>
 </html>
