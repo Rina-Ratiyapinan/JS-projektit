@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lomake localStorage</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div class="form">
+    <h2>Täytä lomake</h2>
+    <form id="infoForm">
+      <div class="user-details">
+        <label for="etunimi">Etunimi</label>
+        <input type="text" id="etunimi" name="etunimi" required>
+        <label for="sukunimi">Sukunimi</label>
+        <input type="text" id="sukunimi" name="sukunimi" required>
+      <br>
+        <label for="lahiosoite">Lähiosoite</label>
+        <input type="text" id="lahiosoite" name="lahiosoite" required>
+      <br>
+        <label for="postinumero">Postinumero</label>
+        <input type="text" id="postinumero" name="postinumero" required pattern="^\d{5}$" title="Syötä viisinumeroinen postinumero.">
+      
+        <label for="postitoimipaikka">Postitoimipaikka</label>
+        <input type="text" id="postitoimipaikka" name="postitoimipaikka" required>
+      <br>
+        <label for="puhelin">Puhelin</label>
+        <input type="tel" id="puhelin" name="puhelin" required pattern="^\+?\d{7,15}$" title="Syötä oikea puhelinnumero.">
+      
+        <label for="sahkoposti">Sähköposti</label>
+        <input type="email" id="sahkoposti" name="sahkoposti" required>
+      </div>
+      <br>
+      <button type="submit" id="saveButton">Tallenna</button>
+      <a href="saved-data.html" id="reviewButton" class="button-link">Näytä tallennetut tiedot</a>
+    </form>
+  </div>
+  <script src="js/form-handler.js"></script>
+</body>
+</html>
