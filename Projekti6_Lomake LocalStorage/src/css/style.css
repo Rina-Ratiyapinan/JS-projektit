@@ -1,0 +1,199 @@
+/* General Body Styles (applies to all pages) */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff; /* Light background */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* FORM PAGE STYLES (index.html) */
+body.form-page {
+  display: flex; 
+  justify-content: center;
+  align-items: center; 
+  height: 100vh;
+}
+
+/* Form Container */
+.form {
+  width: 700px;  
+  padding: 20px;
+  border: 2px solid #dc3545; /* Red border */
+  border-radius: 10px;       /* Rounded corners */
+  background-color: #f0f0f0; /* Light gray background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Heading */
+.form h2 {
+  text-align: center;
+  color: #333;
+  margin: 10px;
+}
+
+/* Input and Label Styling */
+.form label {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.form input {
+  width: calc(100% - 20px);
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  background-color: white;
+  font-size: 14px;
+}
+
+/* Submit Button */
+#saveButton {
+  display: block;
+  width: 20%;
+  padding: 10px;
+  background-color: rgb(236, 86, 44);
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+#saveButton:hover {
+  background-color: #c82333;
+}
+
+/* Link Button */
+#reviewButton {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: #007bff;
+  margin-top: 15px;
+}
+
+#reviewButton:hover {
+  text-decoration: underline;
+}
+
+/* SAVED DATA PAGE STYLES (saved-data.html) */
+
+body.data-page {
+  display: block;
+}
+
+/* Counter and Search Section Alignment */
+main {
+  display: flex;
+  flex-direction: column; /* Stack sections vertically */
+  width: 100%;
+  padding: 20px;
+}
+
+/* Top Section: Counter and Search Box */
+.top-section {
+  display: flex;
+  justify-content: space-between; /* Space between counter and search box */
+  align-items: center; /* Align them vertically in line */
+  margin-bottom: 20px; /* Add spacing below this section */
+  width: 100%;
+}
+
+.goback-btn button{
+  font-size: 14px;
+  float: left;
+  margin: 20px;
+  width: 150px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+}
+
+/* Counter Section */
+.counter {
+  text-align: left;
+}
+
+.counter h2 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.counter p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/* Search Box Section */
+.search-box {
+  display: flex;
+  justify-content: flex-end; /* Align the elements inside to the right */
+  align-items: center; /* Center input and button vertically */
+  margin-right: 80px;
+}
+
+.search-box input {
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.search-box button {
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-box button:hover {
+  background-color: #0056b3;
+}
+
+/* Table Styles */
+table {
+  width: 95%; /* Table centered */
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #dee2e6;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+/* Edit and Delete Buttons */
+table td:last-child {
+  text-align: center;
+}
+
+table td:last-child button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+table td:last-child button:hover {
+  color: rgb(255, 255, 255);
+  background-color: #007bff;
+}

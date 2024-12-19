@@ -6,7 +6,7 @@
   <title>Saved Data</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="data-page">
   <header>
     <div class="goback-btn">
       <button type="button" id="gobackButton" onclick="window.history.back()">Takaisin</button>
@@ -14,16 +14,17 @@
   </header>
 
   <main>
-    <section class="counter">
-      <h2>Kaikki tiedoista</h2>
-      <p>Loppusumma: <span id="totalSum">0</span></p>
-    </section>
-
-    <section class="search-box">
-      <label for="search" class="visually-hidden">Hae tiedoista</label>
-      <input type="text" id="search" placeholder="Hae tiedoista...">
-      <button type="submit" id="searchButton">Haku</button>
-    </section>
+    <div class="top-section">
+      <section class="counter">
+        <h2>Kaikki tiedoista</h2>
+        <p>Loppusumma: <span id="totalSum">0</span></p>
+      </section>
+  
+      <section class="search-box">
+        <input type="text" id="search" placeholder="Hae tiedoista...">
+        <button type="submit" id="searchButton">Haku</button>
+      </section>
+    </div>
 
     <section class="table-container">
       <table id="dataTable">
